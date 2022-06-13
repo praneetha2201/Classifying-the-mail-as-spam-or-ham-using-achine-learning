@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <br><br>
+        <h2><pre>      Email id validation</pre></h2>
+    </head>
+    <body >
+        
+       <link rel='stylesheet' href='1.css'>
+       <form action='#' id='form'></form>
+       <div class='card'>
+                <br>
+                <input type='text' id='mail' name='' placeholder='Enter mail adrdress'>
+                <span id='text'></span>
+                <br><br>
+                <button onclick='Click()'>Verify</button>
+        </div>
+    </body>
+    <script>
+        function Click()
+        {
+            var mailid=document.getElementById('mail').value;
+            var reg=/^[a-zA-Z._-]+[a-zA-Z0-9._-]+@[a-zA-Z0.-]+\.[a-zA-Z]{2,4}$/;
+            if(reg.test(mailid))
+            {
+                alert('Email is valid ');
+                window.location.href='link.html';
+            }
+            else{
+                alert('Mail id not valid');
+            }
+        }
+    </script>
+</html>
